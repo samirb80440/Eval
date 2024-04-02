@@ -2,6 +2,7 @@ var PU,QTECOM,PAP=0,REM=0,PORT,TOT=0
 PU=prompt(" saisie du prix unitaire")
  QTECOM=prompt("saisie de la quantité commandée")
  TOT= PU * QTECOM
+ PAP=TOT
  if(TOT>100 && TOT<=200){
   REM=((+TOT/100)*5)
   REM=Math.round(REM*100)/100
