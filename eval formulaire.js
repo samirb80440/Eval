@@ -73,8 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 })
 })
-
-
 const re=document.getElementById("sujet1")
 const Sujetelement=document.getElementById("Sujet")
 
