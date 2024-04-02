@@ -1,39 +1,72 @@
-function verif(){
+document.addEventListener('DOMContentLoaded', function () {
+    const formulaire = document.getElementById("formulaire");
+
+    formulaire.addEventListener('submit', function (e) {
+    {
+
+        e.preventDefault();
+
     caract=document.getElementById("nom").value
+     envoye= true
     ListeCaract=new RegExp("^[A-Za-z]")
     ListeCodepost=new RegExp("^([0-9]{5})*$")
     ListeEmail=new RegExp("^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$")
     ListeNaissance=new RegExp("^[0-9]+\/[0-9]+\/[0-9]+$")
     test= ListeCaract.test(caract)
     if (caract ==false){
-        alert("Entrez votre nom")
+        alert("Entrer votre nom")
     }
     caract=document.getElementById("prenom").value
     test=ListeCaract.test(caract)
     if(caract==false){
-        alert("entrez votre prenom")
+        alert("Entrer votre prenom")
     }
+    sexe=document.getElementById("Sexe")
+    sexe2=document.getElementById("Sexe2")
+    if(sexe.checked==false&& sexe2.checked==false){
+        alert("Sélectionner un Sexe ")
+        
+    }
+ 
     Datenaissance=document.getElementById("date").value
     test2=ListeNaissance.test(Datenaissance)
     if(Datenaissance==false){
-        alert("Entrez votre date de naissance")
+        alert("Entrer votre date de naissance")
     }
     codepost=document.getElementById("Codepostal").value
     test3=ListeCodepost.test(codepost)
     if(codepost==false){
-        alert("Entrez votre code postal")
+        alert("Entrer votre code postal")
     }
     Email=document.getElementById("Email").value
     test4=ListeEmail.test(Email)
     if(Email==false){
-        alert("Entrez votre email")
+        alert("Entrer votre email")
     }
-    caract=document.getElementById("VotreQuestion")
+    sujet=document.getElementById("Sujet").value
+    if(sujet==""){
+        alert("Sélectionner un sujet")
+    }
+    caract=document.getElementById("VotreQuestion").value
     test=ListeCaract.test(caract)
     if(caract==false){
-        alert("entre votre question")
+        alert("Entrer votre question")
     }
+    valid=document.getElementById("validation")
+    if(valid.checked==false){
+        alert("Cocher la case ")
+        return false
     }
+    if (envoye) 
+    {
+        console.log("Formulaire valide, prêt à être soumis.");
+        formulaire.submit();
+    }
+}
+})
+})
+
+
 const re=document.getElementById("sujet1")
 const Sujetelement=document.getElementById("Sujet")
 

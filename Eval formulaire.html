@@ -27,16 +27,16 @@
     <div class="paragraphe">
         <div class="texte">
             <h1><sup>*</sup>Contact</h1>
-            <form action="http://bienvu.net/script.php" method="POST">
+            <form id="formulaire" action="http://bienvu.net/script.php" method="POST">
                 <p>*Ces zones sont obligatoires</p>
                 <fieldset>
                     <legend>Vos Coordonées</legend>
-                    <br><label for="nom">Votre nom* : </label><input type="text" name="nom" id="nom" required>
+                    <br><label for="nom">Votre nom* :</label><input type="text" name="nom" id="nom" required>
                     <br><label for="prenom">Votre prénom*: </label><input type="text" name="prenom" id="prenom"
                         required>
-                    <br><label for="Sexe">Sexe* :</label><input type="radio" name="Sexe" value="Féminin" id="Sexe"
+                    <br><label for="Sexe">Sexe* :</label><input  id="Sexe" type="radio" name="Sexe" value="Féminin"
                         required>Féminin
-                    <input type="radio" name="Sexe" value="Masculin" required>Masculin
+                    <input type="radio" name="Sexe" value="Masculin" id="Sexe2"   required>Masculin
                     <br><label for="date">Date de naissance*: </label><input type="date" name="ddn" id="date" required>
                     <br><label for="Codepostal">Code postal*: </label><input type="text" name="Codepostal"
                         id="Codepostal" required>
@@ -48,7 +48,7 @@
                     <legend>Votre demande</legend>
                     <label for="Sujet">Sujet*:</label>
                     <select id="Sujet">
-                        <option value="" id="sujet1" selected>Veuillez séléctioner un sujet</option>
+                        <option value="" id="sujet1" selected>Veuillez séléctionner un sujet</option>
                         <option value="Mes commandes">Mes commandes</option>
                         <option value="Question sur un produit">Question sur un produit</option>
                         <option value="Réclamation">Réclamation</option>
@@ -57,11 +57,12 @@
                     <br><label for="VotreQuestion">Votre Question*:</label><textarea name="Votre Question" rows="4"
                         cols="25" id="VotreQuestion" required></textarea>
                 </fieldset>
-
-                <br><input type="submit" value="Envoyer" onclick="verif()">
+                <input type="checkbox" name="case" id="validation"><label>*J'accepte le traitement informatique de ce formulaire</label><br>
+                <br><input type="submit" value="Envoyer" >
                 <input type="submit" value="Annuler">
             </form>
         </div>
+        <div class="colonne">[COLONNE DROITE]</div>
     </div>
     <footer>
         <ul type="disc">
@@ -70,6 +71,6 @@
             <li><a href="PageAcceuil.html">plan du site</a></li>
         </ul>
     </footer>
+    <script src="eval formulaire.js"></script>
 </body>
-<script src="eval formulaire.js"></script>
 </html>
