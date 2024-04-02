@@ -13,16 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
     ListeNaissance=new RegExp("^[0-9]+\/[0-9]+\/[0-9]+$")
     test= ListeCaract.test(caract)
     if (caract ==false){
+        envoyer=false
         alert("Entrer votre nom")
     }
     caract=document.getElementById("prenom").value
     test=ListeCaract.test(caract)
     if(caract==false){
+        envoyer=false
         alert("Entrer votre prenom")
     }
     sexe=document.getElementById("Sexe")
     sexe2=document.getElementById("Sexe2")
     if(sexe.checked==false&& sexe2.checked==false){
+        envoyer=false
         alert("Sélectionner un Sexe ")
         
     }
@@ -30,31 +33,37 @@ document.addEventListener('DOMContentLoaded', function () {
     Datenaissance=document.getElementById("date").value
     test2=ListeNaissance.test(Datenaissance)
     if(Datenaissance==false){
+        envoyer=false
         alert("Entrer votre date de naissance")
     }
     codepost=document.getElementById("Codepostal").value
     test3=ListeCodepost.test(codepost)
     if(codepost==false){
+        envoyer=false
         alert("Entrer votre code postal")
     }
     Email=document.getElementById("Email").value
     test4=ListeEmail.test(Email)
     if(Email==false){
+        envoyer=false
         alert("Entrer votre email")
     }
     sujet=document.getElementById("Sujet").value
     if(sujet==""){
+        envoyer=false
         alert("Sélectionner un sujet")
     }
     caract=document.getElementById("VotreQuestion").value
     test=ListeCaract.test(caract)
     if(caract==false){
+        envoyer=false
         alert("Entrer votre question")
     }
     valid=document.getElementById("validation")
     if(valid.checked==false){
+        envoyer=false
         alert("Cocher la case ")
-        return false
+       
     }
     if (envoyer) 
     {
