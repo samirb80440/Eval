@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     formulaire.addEventListener('submit', function (e) {
     {
-
         e.preventDefault();
 
     caract=document.getElementById("nom").value
-     envoye= true
+     envoyer= true
     ListeCaract=new RegExp("^[A-Za-z]")
     ListeCodepost=new RegExp("^([0-9]{5})*$")
     ListeEmail=new RegExp("^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$")
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert("Cocher la case ")
         return false
     }
-    if (envoye) 
+    if (envoyer) 
     {
         console.log("Formulaire valide, prêt à être soumis.");
         formulaire.submit();
