@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Contact</title>
-    <link rel="stylesheet" href="jarditou_css/assets/css/Styles.css">
-    <link rel="stylesheet" href=jarditou_css/assets/css/Media.css>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Media.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                     <legend>Votre demande</legend>
                     <label for="Sujet">Sujet*:</label>
                     <select id="Sujet">
-                        <option value="Veuillez séléctioner un sujet" selected>Veuillez séléctioner un sujet</option>
+                        <option value="" id="sujet1" selected>Veuillez séléctioner un sujet</option>
                         <option value="Mes commandes">Mes commandes</option>
                         <option value="Question sur un produit">Question sur un produit</option>
                         <option value="Réclamation">Réclamation</option>
@@ -58,7 +58,7 @@
                         cols="25" id="VotreQuestion" required></textarea>
                 </fieldset>
 
-                <br><input type="submit" value="Envoyer">
+                <br><input type="submit" value="Envoyer" onclick="verif()">
                 <input type="submit" value="Annuler">
             </form>
         </div>
@@ -71,5 +71,5 @@
         </ul>
     </footer>
 </body>
-
+<script src="eval formulaire.js"></script>
 </html>
