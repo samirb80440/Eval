@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
      envoyer= true
     ListeCaract=new RegExp("^[A-Za-z]")
     ListeCodepost=new RegExp("^([0-9]{5})+$")
-    ListeEmail=new RegExp("^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$")
+    ListeEmail=new RegExp("^[_A-Za-z0-9.-]+@[a-z0-9.-]+.[a-z]{2,4}$")
     ListeNaissance=new RegExp("^[0-9]+-[0-9]+-[0-9]+$") 
     test= ListeCaract.test(caract)
     if (test==false){
@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
         envoyer=false
         alert("Entrer votre code postal")
     }
-    Email=document.getElementById("Email").value
+    Email=document.getElementById("email").value
     test4=ListeEmail.test(Email)
-    if(test4=false){
+    if(test4==false){
         envoyer=false
         alert("Entrer votre email")
     }
