@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
     ListeEmail=new RegExp("^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$")
     ListeNaissance=new RegExp("^[0-9]+\/[0-9]+\/[0-9]+$") 
     test= ListeCaract.test(caract)
-    if (caract ==false){
+    if (test==false){
         envoyer=false
         alert("Entrer votre nom")
     }
     caract=document.getElementById("prenom").value
     test=ListeCaract.test(caract)
-    if(caract==false){
+    if(test==false){
         envoyer=false
         alert("Entrer votre prenom")
     }
@@ -31,19 +31,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     Datenaissance=document.getElementById("date").value
     test2=ListeNaissance.test(Datenaissance)
-    if(Datenaissance==false){
+    if(test2==false){
         envoyer=false
         alert("Entrer votre date de naissance")
     }
     codepost=document.getElementById("Codepostal").value
     test3=ListeCodepost.test(codepost)
-    if(codepost==false){
+    if(test3==false){
         envoyer=false
         alert("Entrer votre code postal")
     }
     Email=document.getElementById("Email").value
     test4=ListeEmail.test(Email)
-    if(Email==false){
+    if(test4=false){
         envoyer=false
         alert("Entrer votre email")
     }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     caract=document.getElementById("VotreQuestion").value
     test=ListeCaract.test(caract)
-    if(caract==false){
+    if(test==false){
         envoyer=false
         alert("Entrer votre question")
     }
