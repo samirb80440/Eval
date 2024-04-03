@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
         alert("Sélectionner un Sexe ")
         
     }
- 
     Datenaissance=document.getElementById("date").value
     test2=ListeNaissance.test(Datenaissance)
     if(Datenaissance==false){
