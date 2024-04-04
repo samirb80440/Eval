@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     caract=document.getElementById("nom").value
      envoyer= true
-    ListeCaract=new RegExp("^[A-Za-z]")
+    ListeCaract=new RegExp("^[A-Za-z]+$")
     ListeCodepost=new RegExp("^([0-9]{5})+$")
     ListeEmail=new RegExp("^[_A-Za-z0-9.-]+@[a-z0-9.-]+.[a-z]{2,4}$")
     ListeNaissance=new RegExp("^[0-9]+-[0-9]+-[0-9]+$") 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     sexe=document.getElementById("Sexe")
     sexe2=document.getElementById("Sexe2")
-    if(sexe.checked==false&& sexe2.checked==false){
+    if(sexe.checked==false && sexe2.checked==false){
         envoyer=false
         alert("Sélectionner un Sexe ")
         
